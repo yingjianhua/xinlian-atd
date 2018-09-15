@@ -1,0 +1,48 @@
+[2018-09-14 10:28:54][INFO ] irille.pub.bean.PackageBase
+初始化模块【class irille.core.sys.Sys】信息...
+[2018-09-14 10:28:54][WARN ] irille.pub.bean.Bean
+countTestCases
+[2018-09-14 10:28:54][INFO ] irille.pub.FileText
+文件[E:\eclipse-workspace\atd\src/main/java\com\irille\atd\domain\lg\LgAccess.java]已修改, 请按【F5】键同步显示内容!
+[2018-09-14 10:28:54][INFO ] irille.pub.svr.DbPool
+DbPool初始化开始
+[2018-09-14 10:28:54][INFO ] snaq.db.ConnectionPoolManager
+Loaded ConnectionPoolManager properties with encoding UTF-8
+[2018-09-14 10:28:54][INFO ] snaq.db.ConnectionPoolManager.irille
+irille: Created pool irille (minpool=0,maxpool=100,maxsize=100,idleTimeout=60)
+[2018-09-14 10:28:54][INFO ] irille.pub.svr.DbPool
+DbPool初始化成功
+[2018-09-14 10:28:54][INFO ] irille.pub.svr.DbPool
+init poolManager end...
+[2018-09-14 10:28:54][INFO ] snaq.db.ConnectionPool.irille
+irille: Getting connection (user/password): jdbc:mysql://localhost:3306/adt?useUnicode=true&characterEncoding=UTF8&serverTimezone=Asia/Shanghai
+[2018-09-14 10:28:54][INFO ] snaq.db.ConnectionPool.irille
+irille: Created a new connection
+[2018-09-14 10:28:54][WARN ] irille.pub.bean.Bean
+countTestCases
+[2018-09-14 10:28:54][INFO ] irille.pub.FileText
+文件[E:\eclipse-workspace\atd\src/main/java\com\irille\atd\domain\lg\LgAccess.java]已修改, 请按【F5】键同步显示内容!
+[2018-09-14 10:29:40][INFO ] irille.pub.bean.PackageBase
+初始化模块【class irille.core.sys.Sys】信息...
+[2018-09-14 10:29:40][WARN ] irille.pub.bean.Bean
+countTestCases
+[2018-09-14 10:29:40][INFO ] irille.pub.FileText
+文件[E:\eclipse-workspace\atd\src/main/java\com\irille\atd\domain\lg\LgAccess.java]已修改, 请按【F5】键同步显示内容!
+[2018-09-14 10:29:40][INFO ] irille.pub.svr.DbPool
+DbPool初始化开始
+[2018-09-14 10:29:40][INFO ] snaq.db.ConnectionPoolManager
+Loaded ConnectionPoolManager properties with encoding UTF-8
+[2018-09-14 10:29:40][INFO ] snaq.db.ConnectionPoolManager.irille
+irille: Created pool irille (minpool=0,maxpool=100,maxsize=100,idleTimeout=60)
+[2018-09-14 10:29:40][INFO ] irille.pub.svr.DbPool
+DbPool初始化成功
+[2018-09-14 10:29:40][INFO ] irille.pub.svr.DbPool
+init poolManager end...
+[2018-09-14 10:29:40][INFO ] snaq.db.ConnectionPool.irille
+irille: Getting connection (user/password): jdbc:mysql://localhost:3306/adt?useUnicode=true&characterEncoding=UTF8&serverTimezone=Asia/Shanghai
+[2018-09-14 10:29:40][INFO ] snaq.db.ConnectionPool.irille
+irille: Created a new connection
+[2018-09-14 10:29:40][WARN ] irille.pub.bean.Bean
+countTestCases
+[2018-09-14 10:29:40][INFO ] irille.pub.FileText
+文件[E:\eclipse-workspace\atd\src/main/java\com\irille\atd\domain\lg\LgAccess.java]已修改, 请按【F5】键同步显示内容!

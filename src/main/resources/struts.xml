@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.devMode" value="false" /><!-- 开发模式 -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+	<constant name="struts.multipart.maxSize" value="20485760" />
+	
+	<package name="api" namespace="/api" extends="struts-default">
+		<interceptors>
+			<!-- 拦截器配置 -->
+			<interceptor name="ItpDbTransaction" class="com.irille.atd.interceptor.ItpDbTransaction"/>
+			<interceptor name="ItpExceptionHandler" class="com.irille.atd.interceptor.ItpExceptionHandler"/>
+			<interceptor name="ItpFileUpload" class="irille.pub.svr.ItpFileUpload"/>
+
+			<!-- 拦截器栈配置,拦截栈可以包含拦截器栈 -->
+			<interceptor-stack name="irilleStack">
+				<interceptor-ref name="ItpExceptionHandler" />
+				<interceptor-ref name="ItpDbTransaction" />
+				<interceptor-ref name="ItpFileUpload">
+					<param name="maximumSize">4194304</param>
+				</interceptor-ref>
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<!-- 将自定义拦截器设置为默认拦截器-->
+    	<default-interceptor-ref name="irilleStack"></default-interceptor-ref>
+    	
+		<action name="*_*_*" class="com.irille.atd.action.{1}.{2}Action" method="{3}"></action>
+	</package>
+</struts>
+ 
