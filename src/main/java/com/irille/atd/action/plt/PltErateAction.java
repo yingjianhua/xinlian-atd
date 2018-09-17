@@ -1,8 +1,7 @@
 package com.irille.atd.action.plt;
 
-import com.irille.atd.domain.plt.PltErate;
-
-import irille.action.BeanAction;
+import com.irille.atd.entity.plt.PltErate;
+import com.irille.core.controller.BeanAction;
 
 public class PltErateAction  extends BeanAction<PltErate, Integer>{
 

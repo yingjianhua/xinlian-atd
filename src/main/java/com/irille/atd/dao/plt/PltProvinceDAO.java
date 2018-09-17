@@ -3,10 +3,10 @@ package com.irille.atd.dao.plt;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.irille.atd.domain.plt.PltProvince;
-import com.irille.atd.domain.plt.PltProvince.T;
-import com.irille.atd.pub.bean.Query;
+import com.irille.atd.entity.plt.PltProvince;
+import com.irille.atd.entity.plt.PltProvince.T;
 import com.irille.atd.view.plt.ProvinceView;
+import com.irille.core.repository.Query;
 
 public class PltProvinceDAO {
 	

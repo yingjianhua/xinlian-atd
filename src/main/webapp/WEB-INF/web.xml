@@ -22,8 +22,8 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
   <servlet>
-    <servlet-name>StartInitServlet</servlet-name>
-    <servlet-class>irille.pub.svr.StartInitServlet</servlet-class>
+    <servlet-name>StartupServlet</servlet-name>
+    <servlet-class>com.irille.atd.config.StartupServlet</servlet-class>
     <load-on-startup>0</load-on-startup>
   </servlet>
   <servlet>

@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.irille.atd.domain.lg.LgAccess;
-import com.irille.atd.pub.bean.statistics.Table;
+import com.irille.atd.entity.lg.LgAccess;
+import com.irille.core.repository.statistics.Table;
 
 import irille.pub.svr.DbPool;
 

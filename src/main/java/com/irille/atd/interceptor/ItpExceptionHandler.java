@@ -7,13 +7,13 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts2.ServletActionContext;
 
-import com.irille.atd.config.AppConfig;
 import com.irille.atd.dao.lg.LgAccessDAO;
+import com.irille.core.controller.BaseAction;
+import com.irille.core.web.config.AppConfig;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.ActionProxy;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
 
-import irille.action.BaseAction;
 import irille.pub.Exp;
 
 public class ItpExceptionHandler extends AbstractInterceptor {

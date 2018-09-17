@@ -3,9 +3,9 @@ package com.irille.atd.dao.plt;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.irille.atd.domain.plt.PltErate;
-import com.irille.atd.pub.bean.Query;
+import com.irille.atd.entity.plt.PltErate;
 import com.irille.atd.view.plt.CurrencyView;
+import com.irille.core.repository.Query;
 
 import irille.pub.Log;
 
@@ -13,7 +13,7 @@ public class PltErateDAO {
     public static final Log LOG = new Log(PltErateDAO.class);
 
     public static PltErate find(Integer pkey) {
-        return com.irille.atd.pub.bean.Query.SELECT(PltErate.class, pkey);
+        return Query.SELECT(PltErate.class, pkey);
     }
 
     /**

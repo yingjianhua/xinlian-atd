@@ -1,6 +1,6 @@
 package com.irille.atd.interceptor;
 
-import com.irille.atd.config.AppConfig;
+import com.irille.core.web.config.AppConfig;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
 

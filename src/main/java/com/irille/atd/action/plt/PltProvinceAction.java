@@ -5,9 +5,8 @@ import java.io.IOException;
 import org.json.JSONException;
 
 import com.irille.atd.dao.plt.PltProvinceDAO;
-import com.irille.atd.domain.plt.PltProvince;
-
-import irille.action.BeanAction;
+import com.irille.atd.entity.plt.PltProvince;
+import com.irille.core.controller.BeanAction;
 
 public class PltProvinceAction extends BeanAction<PltProvince, Integer> {
 

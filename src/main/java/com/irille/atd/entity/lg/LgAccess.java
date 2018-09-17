@@ -1,4 +1,7 @@
-package com.irille.atd.domain.lg;
+package com.irille.atd.entity.lg;
+
+import java.util.Date;
+import java.util.stream.Stream;
 
 import irille.core.sys.Sys;
 import irille.core.sys.Sys.OYn;
@@ -8,8 +11,6 @@ import irille.pub.tb.Fld;
 import irille.pub.tb.IEnumFld;
 import irille.pub.tb.Tb;
 import irille.pub.tb.TbBase;
-
-import java.util.Date;
 
 public class LgAccess extends BeanInt<LgAccess> {
 	private static final long serialVersionUID = 3685013477292302359L;
@@ -34,23 +35,23 @@ public class LgAccess extends BeanInt<LgAccess> {
 		private Fld<?> _fld;
 
 		private T(Class<?> clazz, String name, boolean... isnull) {
-			_fld = TB.addOutKey(clazz, this, name, isnull);
+			_fld = IEnumFld.crtFld(this, clazz, name, isnull);
 		}
 
 		private T(IEnumFld fld, boolean... isnull) {
-			this(fld, null, isnull);
+			_fld = IEnumFld.crtFld(this, fld, null, isnull);
 		}
 
 		private T(IEnumFld fld, String name, boolean... null1) {
-			_fld = TB.add(fld, this, name, null1);
+			_fld = IEnumFld.crtFld(this, fld, name, null1);
 		}
 
 		private T(IEnumFld fld, String name, int strLen) {
-			_fld = TB.add(fld, this, name, strLen);
+			_fld = IEnumFld.crtFld(this, fld, name, strLen);
 		}
 
 		private T(Fld<?> fld) {
-			_fld = TB.add(fld, this);
+			_fld = IEnumFld.crtFld(this, fld);
 		}
 
 		public Fld<?> getFld() {
@@ -59,7 +60,8 @@ public class LgAccess extends BeanInt<LgAccess> {
 	}
 
 	static { // 在此可以加一些对FLD进行特殊设定的代码
-		T.PKEY.getFld().getTb().lockAllFlds();// 加锁所有字段,不可以修改
+		Stream.of(T.values()).forEach(f->TB.add(f.getFld()));
+		TB.lockAllFlds();
 	}
 
 	public static Fld<?> fldOutKey() {

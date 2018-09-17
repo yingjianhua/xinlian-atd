@@ -1,7 +1,10 @@
-package com.irille.atd.domain.plt;
+package com.irille.atd.entity.plt;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.stream.Stream;
+
+import com.irille.atd.entity.lg.LgAccess.T;
 
 import irille.core.sys.Sys.OEnabled;
 import irille.core.sys.Sys.OYn;
@@ -35,19 +38,35 @@ public class PltErate  extends BeanInt<PltErate>{
 	//>>>以下是自动产生的源代码行--自动建立的索引定义--请保留此行用于识别>>>
 	//<<<以上是自动产生的源代码行--自动建立的索引定义--请保留此行用于识别<<<	
 	
-	private Fld _fld;
-	private T(Class clazz,String name,boolean... isnull) 
-			{_fld=TB.addOutKey(clazz,this,name,isnull);	}
-	private T(IEnumFld fld,boolean... isnull) { this(fld,null,isnull); } 
-	private T(IEnumFld fld, String name,boolean... null1) {
-			_fld=TB.add(fld,this,name,null1);}
-	private T(IEnumFld fld, String name,int strLen) {
-			_fld=TB.add(fld,this,name,strLen);}
-	private T(Fld fld) {_fld=TB.add(fld,this); }
-	public Fld getFld(){return _fld;}
+		private Fld<?> _fld;
+
+		private T(Class<?> clazz, String name, boolean... isnull) {
+			_fld = IEnumFld.crtFld(this, clazz, name, isnull);
+		}
+
+		private T(IEnumFld fld, boolean... isnull) {
+			_fld = IEnumFld.crtFld(this, fld, null, isnull);
+		}
+
+		private T(IEnumFld fld, String name, boolean... null1) {
+			_fld = IEnumFld.crtFld(this, fld, name, null1);
+		}
+
+		private T(IEnumFld fld, String name, int strLen) {
+			_fld = IEnumFld.crtFld(this, fld, name, strLen);
+		}
+
+		private T(Fld<?> fld) {
+			_fld = IEnumFld.crtFld(this, fld);
+		}
+
+		public Fld<?> getFld() {
+			return _fld;
+		}
 	}
 	static { //在此可以加一些对FLD进行特殊设定的代码		
-		T.PKEY.getFld().getTb().lockAllFlds();//加锁所有字段,不可以修改
+		Stream.of(T.values()).forEach(f->TB.add(f.getFld()));
+		TB.lockAllFlds();
 	}
 	public static Fld fldOutKey() {
 		return fldOutKey(TB.getCodeNoPackage(), TB.getShortName());

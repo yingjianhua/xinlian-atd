@@ -1,6 +1,6 @@
 package com.irille.atd.view.plt;
 
-import com.irille.atd.domain.plt.PltErate;
+import com.irille.atd.entity.plt.PltErate;
 
 public class CurrencyView {
 	private Integer id;
